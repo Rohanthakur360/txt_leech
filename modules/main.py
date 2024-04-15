@@ -31,8 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("**ℍɪɪ** ┈━═My Freind═━┈😎\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File Om Telegram So Basically If You Want To Use Me First Send Me /upload Command And Then Follow Few Steps..")
-
+    editable = await m.reply_text(f"Hello [{m.from_user.first_name}](tg://user?id={m.from_user.id})\nPress /stubborn")
 
 @bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
@@ -41,7 +40,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["upload"]))
+@bot.on_message(filters.command(["stubborn"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -110,7 +109,7 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the Thumb url/nEg » https://telegra.ph/file/1bf523c4b51530e57e84d.jpg \n Or if don't want thumbnail send = no")
+    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/3d4562c52f26a50809325.jpg \n Or if don't want thumbnail send = no")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text
     await input6.delete(True)
@@ -162,8 +161,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{MR}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
-                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
+                cc = f'**[📽️] Vid_ID:** {str(count).zfill(3)}.** {𝗻𝗮𝗺𝗲𝟭}{Stubborn}.mkv\n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
+                cc1 = f'**[📁] Pdf_ID:** {str(count).zfill(3)}. {𝗻𝗮𝗺𝗲𝟭}{Stubbonr}.pdf \n**𝔹ᴀᴛᴄʜ** » **{raw_text0}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -206,7 +205,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**𝔻ᴏɴᴇ 𝔹ᴏ𝕤𝕤😎**")
+    await m.reply_text("🔰Done 𝔹ᴏ𝕤𝕤🔰 ")
 
 
 bot.run()
